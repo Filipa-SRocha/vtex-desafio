@@ -1,0 +1,30 @@
+{
+	"slider-layout#home": {
+		"children": [
+			"image#product1",
+			"image#product2"
+		],
+		"props": {
+			"autoplay": {
+				"timeout": 7000,
+				"stopOnHover": true
+			},
+			"showPaginationDots":"always",
+			"itemsPerPage": {
+       			"desktop": 1,
+        		"tablet": 1,
+        		"phone": 1
+      		}
+		}
+	},
+	"image#product1": {
+		"props": {
+			"src": "assets/banner.png"
+		}
+	},
+	"image#product2": {
+		"props": {
+			"src": "assets/guerreiros.png"
+		}
+	}
+}

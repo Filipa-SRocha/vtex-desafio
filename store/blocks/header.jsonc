@@ -14,7 +14,8 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#desktop"]
+    "children": ["flex-layout.row#desktop",
+                  "flex-layout.row#tabs"]
   },
   "flex-layout.row#desktop": {
     "props": {
@@ -28,11 +29,13 @@
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
       "search-bar",
+      "flex-layout.col#spacer",
       "locale-switcher",
       "login",
       "minicart.v2"
     ]
   },
+  
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -48,8 +51,8 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
-      "width": "80"
+      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
+      "width": "150"
     }
   },
   "header-layout.mobile": {
@@ -75,5 +78,117 @@
   },
   "drawer": {
     "children": []
+  },
+
+  //tabs
+
+  "flex-layout.row#tabs":{
+    "children":["tab-layout"],
+    "props":{
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    }
+  },
+
+  "tab-layout":{
+    "children":[
+      "tab-list",
+      "tab-content"
+    ]
+  },
+
+  "tab-list": {
+    "children": [
+      "tab-list.item#1",
+      "tab-list.item#2",
+      "tab-list.item#3",
+      "tab-list.item#4",
+      "tab-list.item#5",
+      "tab-list.item#6",
+      "tab-list.item#7",
+      "tab-list.item#8",
+      "tab-list.item#9",
+      "tab-list.item#10"
+    ]
+  },
+
+  "tab-list.item#1": {
+    "props": {
+      "tabId": "promocao",
+      "label": "Promoção",
+      "defaultActiveTab": true
+    }
+  },
+
+  "tab-list.item#2": {
+    "props": {
+      "tabId": "corinthians",
+      "label": "Corinthians",
+      "defaultActiveTab": false
+    }
+  },
+  "tab-list.item#3": {
+    "props": {
+      "tabId": "palmeiras",
+      "label": "Palmeiras",
+      "defaultActiveTab": false
+    }
+  },
+
+    "tab-list.item#4": {
+    "props": {
+      "tabId": "signos",
+      "label": "Signos",
+      "defaultActiveTab": false
+    }
+  },
+
+  "tab-list.item#5": {
+    "props": {
+      "tabId": "divertidos",
+      "label": "Divertidos",
+      "defaultActiveTab": false
+    }
+  },
+
+  "tab-list.item#6": {
+    "props": {
+      "tabId": "maravilhas",
+      "label": "7 Maravilhas",
+      "defaultActiveTab": false
+    }
+  },
+  "tab-list.item#7": {
+    "props": {
+      "tabId": "guerreiros",
+      "label": "Guerreiros",
+      "defaultActiveTab": false
+    }
+  },
+
+  "tab-list.item#8": {
+    "props": {
+      "tabId": "album1",
+      "label": "Álbum 1",
+      "defaultActiveTab": false
+    }
+  },
+
+  "tab-list.item#9": {
+    "props": {
+      "tabId": "album2",
+      "label": "Álbum 2",
+      "defaultActiveTab": false
+    }
+  },
+
+  "tab-list.item#10": {
+    "props": {
+      "tabId": "album3",
+      "label": "Álbum 3",
+      "defaultActiveTab": false
+    }
   }
 }

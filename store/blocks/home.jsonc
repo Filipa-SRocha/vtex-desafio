@@ -1,15 +1,62 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "flex-layout.row",
+      "slider-layout#home",
+      "category-menu",
+      "search-result-layout.customQuery#home"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+
+  "flex-layout.row":{
+    "children":[
+      "info-card#try"
+    ]
+  },
+
+    "category-menu": {
+    "props": {
+      "showAllDepartments": true,
+      "showSubcategories": true,
+      "menuDisposition": "center",
+      "departments": [],
+      "sortSubcategories": "name"
     }
+  },
+
+  "info-card#try":{
+    "props":{
+      "headline": "Clearance Sale",
+      "callToActionText": "DISCOVER"
+    }
+  },
+
+   "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip"
+      }
+    }
+
+  },
+  "search-result-layout.customQuery#promo":{
+    "props":{
+      "querySchema":{
+        "orderByField":"OrderByTopSaleDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "153",
+        "mapField": "productClustersIds"
+      },
+      "preventRouteChange": true
+    },
+    "blocks":[
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
   }
+  
+
 }
